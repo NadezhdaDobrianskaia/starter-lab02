@@ -11,12 +11,15 @@
  *
  * @author Nadia
  */
-class Gallery extends CI_Controller{
+class Gallery extends Application{
     /**
      * Gallery Page for this controller.
      */
     public function index()
     {
-	$this->load->view('gallery');
+	//$this->load->view('gallery');
+        $this->data['page_tittle'] = 'The Gallery';
+	$this->data['pagebody'] = 'gallery';
+        $this->render();
     }
 }
