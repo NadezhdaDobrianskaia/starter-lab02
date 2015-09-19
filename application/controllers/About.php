@@ -11,12 +11,14 @@
  *
  * @author Nadia
  */
-class About extends CI_Controller{
+class About extends Application {
     /**
      * About Page for this controller.
      */
     public function index()
     {
-	$this->load->view('about');
+	$this->data['page_tittle'] = 'About This Gallery';
+	$this->data['pagebody'] = 'about';
+        $this->render();
     }
 }
