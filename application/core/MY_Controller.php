@@ -20,10 +20,10 @@ class Application extends CI_Controller {
     function __construct()
     {
 	parent::__construct();
-        $this->load->helper('common');
-        $this->load->helper('url');
+//        $this->load->helper('common');
+ //       $this->load->helper('url');
 //        $autoload['helper'] = array('common', 'url');
-        $this->load->library('parser');
+ //       $this->load->library('parser');
 	$this->data = array();
 	$this->data['pagetitle'] = 'Simple Image Gallery';
         
@@ -37,7 +37,7 @@ class Application extends CI_Controller {
 	$this->data['menubar'] = build_menu_bar($this->choices);
 	$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 	$this->data['data'] = $this->data;
-	$this->parser->parse('template', $this->data);
+	$this->parser->parse('_template', $this->data);
     }
 
 }
