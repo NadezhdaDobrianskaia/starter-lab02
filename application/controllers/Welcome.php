@@ -20,7 +20,7 @@ class Welcome extends Application {
 	 */
 	public function index()
 	{
-            $pix = $this->images->all();
+            $pix = $this->images->newest();
         
         foreach ($pix as $picture)
             $cells[] = $this->parser->parse('_cell', (array) $picture, true);
